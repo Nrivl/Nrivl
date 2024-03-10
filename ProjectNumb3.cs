@@ -10,13 +10,26 @@ namespace ConsoleApplication17
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("Enter Your Student Numbers"); 
+
+            Console.WriteLine("Enter Your Student Numbers");
+
+            string[] studentsnames = new string[Convert.ToInt32(Console.ReadLine())];
+
+            int numbersofstudents = studentsnames.Length;
+
+            Get(numbersofstudents);
+            for (int i = 0; i < studentsnames.Length; i++)
+            {
+
+                Console.WriteLine(studentsnames);
+                
+            }
+            Console.ReadKey(); 
 
         }
-        static string[] Get(string[] Studednts)
+        static string[] Get(int Studednts)
         {
-            int numbers = Convert.ToInt32(Console.ReadLine());
+            int numbers = Studednts ;
 
             string[] studentrock = new string[numbers];
             for (int i = 0; i < studentrock.Length; i++)
