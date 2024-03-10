@@ -4,43 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication17
+namespace ConsoleApplication18
 {
     class Program
     {
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter Your Student Numbers");
+            Console.WriteLine("Enter Number");
 
-            string[] studentsnames = new string[Convert.ToInt32(Console.ReadLine())];
+            int number = Convert.ToInt32(Console.ReadLine());
+            string[] Get = new string[number];
 
-            int numbersofstudents = studentsnames.Length;
+            Get = GiveNames(number);
 
-            Get(numbersofstudents);
+            for (int i = 0; i < number; i++)
+            {
+                Console.WriteLine(Get[i]);
+            }
+            Console.ReadKey();
+        }
+        static string[] GiveNames(int studentsnumbers)
+        {
+            string[] studentsnames = new string[studentsnumbers];
+
             for (int i = 0; i < studentsnames.Length; i++)
             {
-
-                Console.WriteLine(studentsnames);
-                
+                Console.WriteLine("Enter Your Students Numbers");
+                studentsnames[i] = Console.ReadLine();
             }
-            Console.ReadKey(); 
-
-        }
-        static string[] Get(int Studednts)
-        {
-            int numbers = Studednts ;
-
-            string[] studentrock = new string[numbers];
-            for (int i = 0; i < studentrock.Length; i++)
-            {
-
-                Console.WriteLine("Enter Your Students Names");
-                studentrock[i] = Console.ReadLine();
-                
-            }
-
-            return studentrock;
+            return studentsnames;
         }
     }
 }
