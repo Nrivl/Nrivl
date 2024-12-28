@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+
+    class Rectangle
+    {
+        public int Length { get; set; }
+        public int Width { get; set; }
+
+        public int Calculate()
+        {
+
+            return Length * Width;
+
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Rectangle reactangle = new Rectangle();
+
+            Console.WriteLine("Enter the Length of the reactangle");
+            reactangle.Length = Convert.ToInt16(Console.ReadLine());
+
+            Console.WriteLine("Enter the Wirdth of the reactangle");
+            reactangle.Width = Convert.ToInt16(Console.ReadLine());
+
+            int area = reactangle.Calculate();
+
+            Console.WriteLine("the area of rectangle is " + area);
+        }
+    }
+}
