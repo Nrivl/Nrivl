@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("enter the number of subjects");
+            int SubjectsNumber = Convert.ToInt32(Console.ReadLine());
+
+            string[] subjects = new string[SubjectsNumber];
+            string[] subjectsname = new string[SubjectsNumber];
+            int[] scores = new int[SubjectsNumber];
+
+            for (int i = 0; i < SubjectsNumber; i++)
+            {
+                Console.WriteLine("enter the subject");
+                subjectsname[i] = Console.ReadLine();
+            }
+
+
+            for (int i = 0; i < SubjectsNumber; i++)
+            {
+                Console.WriteLine("Enter the score");
+                scores[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            for (int i = 0; i < SubjectsNumber; i++)
+            {
+
+                if (scores[i] < 10)
+                {
+                    Console.WriteLine("u failed " + subjectsname[i] + " with the score of " + scores[i]);
+                }
+
+            }
+        }
+    }
+}
+
