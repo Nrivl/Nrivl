@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter a number higher or lower than 10");
+
+            int Number = Convert.ToInt16(Console.ReadLine());
+
+            if (Number > 10)
+            {
+
+                Console.WriteLine("Hello World");
+
+            }
+            else
+            {
+                Console.WriteLine("Goodbye World");
+
+            }
+
+        }
+    }
+}
